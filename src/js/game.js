@@ -1,5 +1,7 @@
-const unit = new Map();
-unit.set('Маг', 100);
+// const unit = new Map();
+// unit.set('Маг', 100);
+
+const unit = ['Маг', 100];
 
 let hp = 0;
 
