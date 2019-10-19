@@ -1,21 +1,16 @@
-// const unit = new Map();
-// unit.set('Маг', 100);
+const unit = {name: 'Маг', health: 26};
+let hp = unit.health;
 
-const unit = ['Маг', 100];
-
-let hp = 0;
-
-
-export default function healthPoint() {
-  for (const health of unit.values()) {
-    if (health > 50) {
+function healthPoint(hp) {
+    if (unit.health > 50) {
       hp = 'healthy';
-    } else if (health < 15) {
+    } else if (unit.health < 15) {
       hp = 'crirical';
     } else {
       hp = 'wounded';
     }
-  }
 
   return hp;
 }
+
+console.log(healthPoint());
