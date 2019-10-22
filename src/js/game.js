@@ -1,16 +1,14 @@
-const unit = {name: 'Маг', health: 26};
-let hp = unit.health;
+export const unit = { name: 'Маг', health: 15 };
+let hp = 0;
 
-function healthPoint(hp) {
-    if (unit.health > 50) {
-      hp = 'healthy';
-    } else if (unit.health < 15) {
-      hp = 'crirical';
-    } else {
-      hp = 'wounded';
-    }
+export function healthPoint() {
+  if (unit.health > 50) {
+    hp = 'healthy';
+  } else if (unit.health < 15) {
+    hp = 'critical';
+  } else {
+    hp = 'wounded';
+  }
 
   return hp;
 }
-
-console.log(healthPoint());
